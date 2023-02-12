@@ -27,7 +27,7 @@
                 <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"/>
             </svg>
         </button>
-    </section>
+    
     <nav class="menu">
         <a href="#inicio">Inicio</a>
         <a href="#acerca">Acerca</a>
@@ -36,6 +36,7 @@
         <a href="#testimonios">testimonials</a>
         <a href="#contacto">Contacto</a>
     </nav>
+    </section>
    </header>
    <section id="inicio" class="home">
     <article class="hero-image" style="--hero-image:url('image/fhoto.jpg');
@@ -51,15 +52,16 @@
     </article>
    </section>
 
-   <section id="acerca" class="about">
-    <article>
-        <aside class="slogan">
+   <section id="acerca" class="about section container full-lg-screen">
+    <article class="text-lg-right">
+        <aside class="text-center text-lg-right">
             <h1>Bryan Banguera</h1>
             <h5>Desarrollador <i>Web</i></h5>
             </aside>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae maiores nemo, laudantium ex cupiditate excepturi nobis in distinctio sequi minus. Non dicta a perspiciatis sequi aliquam odit dolor dolore adipisci.</p>
-        <div>
-            <a class="btn" href="cv/Formato CV.pdf" target="_blank" rel="noopener">Login CV</a>
+        <div class="text-center text-lg-left">
+            <a class="btn" href="cv/Formato CV.pdf" target="_blank" 
+            rel="noopener">Login CV</a>
         </div>
     </article>
 
@@ -68,29 +70,29 @@
     </article>
 
     <article>
-        <h2>Mis Habilidades</h2>
-        <div class="pogress">
+        <h2 class="text-center text-lg-left">Mis Habilidades</h2>
+        <div class="progress">
             <p>
                 <b>Desarrollo <i>frontend</i> <br> Html</b>
                 <b>80%</b>
             </p>
             <progress value="80" min="0" max="100"></progress>
         </div>
-        <div class="pogress">
+        <div class="progress">
             <p>
                 <b>CSS</b>
                 <b>70%</b>
             </p>
             <progress value="70" min="0" max="100"></progress>
         </div>
-        <div class="pogress">
+        <div class="progress">
             <p>
                 <b>react</b>
                 <b>60%</b>
             </p>
             <progress value="60" min="0" max="100"></progress>
         </div>
-        <div class="pogress">
+        <div class="progress">
             <p>
                 <b>JavaScritp</i></b>
                 <b>60%</b>
@@ -98,10 +100,19 @@
             <progress value="60" min="0" max="100"></progress>
         </div>
     </article>
+
    </section>
 
-   <section id="servicios" class="services">
-    <h2>Servicios</h2>
+   <section id="servicios" class="services section">
+        <div class="container">
+            <h2 class="section-title">
+                Que te ofresco
+            </h2>
+            <article class="service-card">
+                <img src="vectores/code-servi1.svg" alt="image">
+                <h3>Programacion <i>Web</i></h3>
+            </article>
+        </div>
    </section>
 
    <section id="portafolio" class="porfolio">

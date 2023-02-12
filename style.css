@@ -113,6 +113,7 @@ p {
 .hero-image-title {
     color: var(--hero-text-color);
     font-size: 3.5vw;
+    filter: drop-shadow(16px 16px 20px rgb(82, 8, 92));
 }
 
 /* menu */
@@ -134,7 +135,7 @@ p {
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: var(--whithe-color);
+   background-color: var(--second-alpha-color);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.5 ease;
@@ -191,10 +192,21 @@ progress{
 progress::-webkit-progress-bar{
     background-color: var(--title-color);
 }
-progress::-webkit-progress-bar{
-    background-color: var(--title-color);
+progress::-webkit-progress-value{
+    background-color: var(--third-color);
 }
-
+progress::-moz-progress-bar{
+    background-color: var(--black-colorr);
+}
+.progress {
+    margin: 1rem auto;
+}
+.progress > p {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: .85rem;
+}
 
 /* utilities */
 
@@ -218,13 +230,53 @@ progress::-webkit-progress-bar{
     margin-left: auto;
     margin-right: auto;
     max-width: var(--max-width);
+    
+}
+
+.gray-scale {
+    filter: grayscale(1);
+
+   /* filter: blur(5px); */
 }
 
 .none {
     display: none;
 }
 
+.section {
+    padding: 2rem 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+
+@media screen and (min-width: 1024px) {
+    .full-lg-screen {
+        width: 100%;
+        min-height: 100vh;
+    }
+    .text-lg-center {
+        text-align: center;
+    }
+    .text-lg-left {
+        text-align: left;
+    }
+    .text-lg-right {
+        text-align: right;
+    }
+}
+
 /* site style */
+.about > article {
+    margin-bottom: 2rem;
+}
 .header {
     position: fixed;
     left: 0;
@@ -253,6 +305,12 @@ progress::-webkit-progress-bar{
 }
 
 @media screen and (min-width: 1024px) {
+    .about {
+        display: grid;
+        grid-template-columns: repeat(3,30%);
+        justify-content: space-between;
+        align-content: center;
+    }
     .header {
         position: sticky;
         top:0;
