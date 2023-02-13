@@ -210,6 +210,10 @@ progress::-moz-progress-bar{
 
 /* utilities */
 
+.bg-gray-ligtht {
+    background-color: var(--whithe-alpha-color);
+}
+
 .box-shadow-1 {
     box-shadow: 0.25rem 0.25rem 1rem rgb(0,0,0.25);
 }
@@ -245,6 +249,17 @@ progress::-moz-progress-bar{
 
 .section {
     padding: 2rem 1rem;
+}
+
+.section-title {
+    border-top: thin solid var(--second-alpha-color);
+    border-bottom: thin solid var(--second-alpha-color);
+    color: var(--second-alpha-color);
+    margin: 2rem auto;
+    padding: 1rem 1rem;
+    text-align: center;
+    width: 250px;
+
 }
 
 .text-center {
@@ -300,8 +315,33 @@ progress::-moz-progress-bar{
     text-decoration: none;
     font-size: 2rem;
 }
-@media screen and (min-width: 768px) {
 
+.service-card {
+    margin: 1rem auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.service-card {
+    margin-bottom: 1.25rem;
+    fill: var(--first-alpha-color);
+}
+
+.service-card h3 {
+    color: var(--second-alpha-color);
+}
+
+@media screen and (min-width: 768px) {
+    .services > .container {
+        display: grid;
+        grid-template-columns: repeat(2,45%);
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    .services .section-title {
+        grid-column: span 2;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -316,6 +356,13 @@ progress::-moz-progress-bar{
         top:0;
         padding: 0.5rem;
         height: calc(var(--header-height)-0.5rem);
+    }
+    .services > .container {
+        grid-template-columns: repeat(3,30%);
+    }
+    
+    .services .section-title {
+        grid-column: span 3;
     }
    
 }
