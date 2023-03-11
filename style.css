@@ -39,7 +39,7 @@ body {
     margin: 0;
     overflow-x: hidden;
     color: var(--text-color);
-    background-color: #0471F6;
+    background-color: #09172A;
 }
 
 a {
@@ -291,7 +291,7 @@ progress::-moz-progress-bar{
 .section-title {
     border-top: thin solid var(--second-alpha-color);
     border-bottom: thin solid var(--second-alpha-color);
-    color: var(--second-alpha-color);
+    color: var(--third-color);
     margin: 2rem auto;
     padding: 1rem 1rem;
     text-align: center;
