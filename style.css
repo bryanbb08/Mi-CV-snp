@@ -393,9 +393,28 @@ progress::-moz-progress-bar{
 }
 
 .portfolio-modal {
+    display: flex;
+    flex-direction: column;
     padding: 1rem;
-    max-width: 400px;
+    max-width: 550px;
     background-color: var(--first-color);
+}
+
+.portfolio-modal h3 {
+    border-bottom: medium solid var(--third-alpha-color);
+    margin: 1rem auto;
+    padding: 0.5rem 0;
+    color: var(--first-alpha-color);
+}
+
+.portfolio-details {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-auto-rows: 2rem;
+}
+
+.portfolio-details b {
+    color: var(--second-alpha-color);
 }
 
 .service-card {
@@ -404,7 +423,7 @@ progress::-moz-progress-bar{
     text-align: center;
 }
 
-.service-card {
+.service-card svg{
     margin-bottom: 1.25rem;
     fill: var(--first-alpha-color);
 }
@@ -414,6 +433,25 @@ progress::-moz-progress-bar{
 }
 
 @media screen and (min-width: 768px) {
+    .portfolio > .container{
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+    }
+
+    .portfolio .section-title {
+        grid-column: span 2;
+        align-self: center;
+    }
+
+    .portfolio-modal {
+        max-width: 800px;
+        flex-direction: row;
+    }
+
+    .portfolio-info {
+        margin-left: 1rem;
+    }
+
     .services > .container {
         display: grid;
         grid-template-columns: repeat(2,45%);
