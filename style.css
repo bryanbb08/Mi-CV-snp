@@ -3,18 +3,18 @@
     --first-color:#fff;
     --first-alpha-color:#41A4F5;
     --second-color:#6d59b6;
-    --second-alpha-color:#98FB98;
+    --second-alpha-color:#060911;
     --third-color:#ED3825;
     --third-alpha-color:#0471F6;
     --whithe-color:#B8BDBB;
-    --gray-light-color:#FFA07A;
-    --gray-color:#FA8072;
+    --gray-light-color:#ffa07a67;
+    --gray-color:#fa80724b;
     --gray-dark-color:#20B2AA;
     --black-color:#09172A;
     --link-color:#008080;
     --title-color: #0B3961;
     --text-color:rgb(4, 60, 163);
-    --whithe-alpha-color:DimGray;
+    --whithe-alpha-color:rgba(105, 105, 105, 0.229);
     --black-alpha-color:rgb(7, 14, 30);
     --font:'Playfair Display', serif;  
     --max-width: 1200px;
@@ -39,6 +39,7 @@ body {
     margin: 0;
     overflow-x: hidden;
     color: var(--text-color);
+    background-color: #0471F6;
 }
 
 a {
@@ -181,7 +182,43 @@ p {
         background-color: transparent;
     }
 }
+/* Modal */
+.modal {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gray-light-color);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 1s;
+}
 
+.modal-content {
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.modal-close svg {
+    width: 3rem;
+    height: 3rem;
+    fill: var(--gray-dark-color);
+}
+
+.modal[id|="trabajo"]:target {
+    opacity: 1;
+    pointer-events: auto;
+}
 /* progress */
 
 progress{
@@ -294,8 +331,8 @@ progress::-moz-progress-bar{
 }
 .header {
     position: fixed;
-    left: 0;
-    bottom: 0;
+    /* left: 0;
+    bottom: 0; */
     z-index: 999;
     padding: 1rem;
     width: 100%;
@@ -314,6 +351,51 @@ progress::-moz-progress-bar{
     font-weight: bold;
     text-decoration: none;
     font-size: 2rem;
+}
+
+.portfolio-card {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.portfolio-card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.portfolio-card-info {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding:  1rem;
+    background-color: var(--whithe-alpha-color);
+    color: var(--third-alpha-color);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.portfolio-card:hover .portfolio-card-info {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.portfolio-card-info > div {
+    padding: 1.5rem;
+    border: thin solid var(--black-color);
+    height: 100%;
+    width: 100%;
+}
+
+.portfolio-modal {
+    padding: 1rem;
+    max-width: 400px;
+    background-color: var(--first-color);
 }
 
 .service-card {
