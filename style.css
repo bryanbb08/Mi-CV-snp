@@ -342,6 +342,15 @@ progress::-moz-progress-bar{
 
 }
 
+.contact-card > img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.contact-card > small {
+    margin-top: -1rem;
+}
+
 .header {
     position: fixed;
     /* left: 0;
@@ -445,7 +454,22 @@ progress::-moz-progress-bar{
     color: var(--second-alpha-color);
 }
 
+.social-media a {
+    padding: 0 0.4rem;
+    text-decoration: none;
+}
+
+.social-media svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
 @media screen and (min-width: 768px) {
+    .contact-cards {
+        display: grid;
+        grid-template-columns: repeat(2,48%);
+        justify-content: space-between;
+    }
     .portfolio > .container{
         display: grid;
         grid-template-columns: repeat(2,50%);
@@ -483,6 +507,9 @@ progress::-moz-progress-bar{
         grid-template-columns: repeat(3,30%);
         justify-content: space-between;
         align-content: center;
+    }
+    .contact-cards {
+        grid-template-columns: repeat(4,24%);
     }
     .header {
         position: sticky;
