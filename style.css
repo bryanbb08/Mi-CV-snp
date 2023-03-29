@@ -384,7 +384,7 @@ progress::-moz-progress-bar{
 
 .portfolio-card img {
     height: 100%;
-    width: 100%;
+    width: 100%; 
     object-fit: cover;
 }
 
@@ -488,6 +488,8 @@ progress::-moz-progress-bar{
     .portfolio-info {
         margin-left: 1rem;
     }
+
+    
 
     .services > .container {
         display: grid;

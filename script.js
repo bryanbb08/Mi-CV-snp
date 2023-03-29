@@ -24,13 +24,13 @@
     $loader = d.querySelector(".contact-form-loader"),
     $response = d.querySelector(".contact-form-response");
 
-    $form.addEventListener("submit", e=> {
+        $form.addEventListener("submit", (e)=> {
         e.preventDefault();
         $loader.classList.remove("none");
         fetch("https://formsubmit.co/ajax/bryanbanguera146@gmail.com",{
             method:"POST",
             body: new FormData(e.target)
-        }).then(res => res.ok ? res.json():Promise.reject(res))
+        }).then((res) => (res.ok ? res.json():Promise.reject(res)))
         .then(json => {
             console.log(json);
             $loader.classList.add("none");
